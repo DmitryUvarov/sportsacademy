@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"RatingsPage"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm', {
+        "line": "header_line"
+        })
+        <main class="page">
+
+            <section class="ratings">
+                <div class="ratings__container">
+                    <div class="ratings__top">
+                        <div class="ratings__sorting sorting">
+                            <div class="sorting__body">
+                                <button class="sorting__title">
+                                    <div class="sorting__title-text">Пол</div>
+                                </button>
+                                <ul class="sorting__list">
+                                    <li class="sorting__item">
+                                        <div class="sorting__checkbox checkbox">
+                                            <input id="c_1" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="c_1" class="checkbox__label">Все</label>
+                                        </div>
+                                    </li>
+                                    <li class="sorting__item">
+                                        <div class="sorting__checkbox checkbox">
+                                            <input id="c_2" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="c_2" class="checkbox__label">М</label>
+                                        </div>
+                                    </li>
+                                    <li class="sorting__item">
+                                        <div class="sorting__checkbox checkbox">
+                                            <input id="c_3" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="c_3" class="checkbox__label">Ж</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sorting__mark mark">Все</div>
+                        </div>
+                        <div class="ratings__title">ИМЯ АТЛЕТА</div>
+                        <div class="ratings__title">ОЧКИ</div>
+                    </div>
+                    <div class="ratings__items">
+                        <div class="ratings__item item-ratings">
+                            <div class="item-ratings__male">Ж</div>
+                            <div class="item-ratings__text">B-Boy Phil Wizard - Philip Kim</div>
+                            <div class="item-ratings__num">3750</div>
+                        </div>
+                        <div class="ratings__item item-ratings">
+                            <div class="item-ratings__male">М</div>
+                            <div class="item-ratings__text">B-Boy Phil Wizard - Philip Kim</div>
+                            <div class="item-ratings__num">3750</div>
+                        </div>
+                        <div class="ratings__item item-ratings">
+                            <div class="item-ratings__male">Ж</div>
+                            <div class="item-ratings__text">B-Boy Phil Wizard - Philip Kim</div>
+                            <div class="item-ratings__num">3750</div>
+                        </div>
+                    </div>
+                    <div class="ratings__pagination pagination-page">
+                        <a href="#" class="pagination-page__item active">1</a>
+                        <a href="#" class="pagination-page__item">2</a>
+                        <a href="#" class="pagination-page__item">3</a>
+                        <a href="#" class="pagination-page__item">4</a>
+                        <a href="#" class="pagination-page__item">5</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
