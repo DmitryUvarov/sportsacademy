@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"PersonalRatingPage"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm', {
+        "line": "header_line"
+        })
+        <main class="page">
+
+            <section class="personalrating">
+                <div class="personalrating__container">
+                    <div class="personalrating__maintitle title title_gradient2">КАРТОЧКА АТЛЕТА</div>
+                    <div class="personalrating__items">
+                        <div class="personalrating__item">
+                            <div class="personalrating__title">ИМЯ</div>
+                            <div class="personalrating__text">Алексей</div>
+                        </div>
+                        <div class="personalrating__item">
+                            <div class="personalrating__title">ФАМИЛИЯ</div>
+                            <div class="personalrating__text">Хромов</div>
+                        </div>
+                        <div class="personalrating__item">
+                            <div class="personalrating__title">СТРАНА</div>
+                            <div class="personalrating__text">Узбекистан</div>
+                        </div>
+                        <div class="personalrating__item">
+                            <div class="personalrating__title">ID - НОМЕР</div>
+                            <div class="personalrating__text">3366888</div>
+                        </div>
+                        <div class="personalrating__item">
+                            <div class="personalrating__title">ВОЗРАСТНАЯ ГРУППА </div>
+                            <div class="personalrating__text">Взрослый</div>
+                        </div>
+                        <div class="personalrating__item">
+                            <div class="personalrating__title">ЛИЦЕНЗИЯ</div>
+                            <div class="personalrating__text">
+                                <span>Статус : Активная</span>
+                                <span>Стиль: Брейкинг</span>
+                                <span>Срок действия: до 30 апреля 2024 г</span>
+                            </div>
+                        </div>
+                        <div class="personalrating__item">
+                            <div class="personalrating__title">РЕЙТИНГ</div>
+                            <div class="personalrating__text">3750</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
