@@ -24,6 +24,10 @@
       }
     }
   }
+
+  &_line {
+    border-bottom: toRem(1) solid #000000;
+  }
   &__container {
   }
 

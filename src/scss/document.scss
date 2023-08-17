@@ -1,0 +1,185 @@
+.document {
+  padding-top: toRem(30);
+  @include adaptiveValue("padding-bottom", 100, 40);
+
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 30);
+  }
+
+  &__items {
+  }
+
+  &__item {
+  }
+
+  &__button {
+    @include adaptiveValue("margin-top", 50, 30);
+    width: 100%;
+  }
+}
+
+.item-document {
+  @include adaptiveValue("font-size", 16, 14);
+  line-height: 118.8%; /* 19/16 */
+
+  padding: toRem(20) 0;
+  border-bottom: toRem(1) solid rgba(0, 0, 0, 0.6);
+
+  &:first-child {
+    border-top: toRem(1) solid rgba(0, 0, 0, 0.6);
+  }
+  &__top {
+  }
+
+  &__body {
+  }
+}
+.top-item-document {
+  position: relative;
+  width: 100%;
+  text-align: start;
+  display: grid;
+  align-items: center;
+  column-gap: toRem(30);
+  row-gap: toRem(20);
+  grid-template-columns: percent(400, 1200) percent(656, 1200) percent(84, 1200);
+
+  @media (min-width: $mobile) {
+    height: toRem(30);
+  }
+
+  @media (max-width: em(1230)) {
+    grid-template-columns: 20% 1fr toRem(105);
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__name {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: toRem(1);
+      bottom: toRem(0);
+      left: 0;
+      display: block;
+      background-color: #303030;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          content: "";
+          opacity: 1;
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      grid-column: 1 / 4;
+    }
+    @media (min-width: $mobile) {
+      width: max-content;
+    }
+  }
+
+  &::after {
+    content: "\e901";
+    @extend %ic;
+    color: #150a93;
+    font-size: toRem(29);
+    transition: all 0.3s ease 0s;
+    width: max-content;
+    margin-left: auto;
+
+    @media (max-width: $mobile) {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      font-size: toRem(20);
+    }
+  }
+
+  &._spoller-active {
+    &::after {
+      transform: rotate(180deg);
+    }
+    .top-item-document__title {
+      font-weight: 600;
+    }
+  }
+}
+.body-item-document {
+  &__wrapper {
+    display: grid;
+    row-gap: toRem(20);
+    column-gap: toRem(30);
+    grid-template-columns: percent(400, 1200) percent(656, 1200) percent(84, 1200);
+
+    @media (max-width: em(1230)) {
+      grid-template-columns: 20% 1fr toRem(105);
+    }
+
+    @media (min-width: $mobile) {
+      &::before {
+        content: "";
+      }
+    }
+  }
+
+  &__names {
+    @media (max-width: $mobile) {
+      grid-column: 1 / 4;
+    }
+  }
+
+  &__name {
+    &:first-child {
+      margin-top: toRem(7);
+      @media (max-width: $mobile) {
+        margin-top: toRem(15);
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+
+    display: inline-block;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: toRem(1);
+      bottom: toRem(0);
+      left: 0;
+      display: block;
+      background-color: #303030;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          content: "";
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    margin-top: auto;
+    margin-left: auto;
+
+    @media (max-width: $mobile) {
+      grid-column: 3 / 4;
+    }
+  }
+}

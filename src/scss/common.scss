@@ -50,6 +50,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  &_gradient2 {
+    background: linear-gradient(128deg, #5b16b4 0%, #3a3938 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 //========================================================================================================================================================
@@ -126,6 +132,28 @@
       &::before {
         content: "\e904";
       }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.pagination-page {
+  display: flex;
+
+  &__item {
+    font-size: 16px;
+    line-height: 118.8%; /* 19/16 */
+    transition: all 0s ease 0s;
+    padding: toRem(5);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #e5270e;
+      }
+    }
+    &.active {
+      color: #e5270e;
     }
   }
 }

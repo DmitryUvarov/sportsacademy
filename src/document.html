@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"DocumentPage"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm', {
+        "line": "header_line"
+        })
+        <main class="page">
+
+            <section class="document">
+                <div class="document__container">
+                    <div class="document__title title title_gradient2">ДОКУМЕНТЫ</div>
+                    <div class="document__items" data-spollers data-one-spoller>
+                        <div class="document__item item-document">
+                            <button type="button" data-spoller class="item-document__top top-item-document">
+                                <div class="top-item-document__title">ПРЕЗИДИУМ</div>
+                                <a href="#" download class="top-item-document__name">Протокол № 232 заседания Президиума от 07.06.2023</a>
+                            </button>
+                            <div class="item-document__body body-item-document">
+                                <div class="body-item-document__wrapper">
+                                    <ul class="body-item-document__names">
+                                        <li class="body-item-document__name"><a href="#" download>Протокол № 233 заседания Президиума от 07.06.2023</a></li>
+                                        <li class="body-item-document__name"><a href="#" download>Протокол № 233 заседания Президиума от 07.06.2023</a></li>
+                                        <li class="body-item-document__name"><a href="#" download>Протокол № 233 заседания Президиума от 07.06.2023</a></li>
+                                        <li class="body-item-document__name"><a href="#" download>Протокол № 233 заседания Президиума от 07.06.2023</a></li>
+                                        <li class="body-item-document__name"><a href="#" download>Протокол № 233 заседания Президиума от 07.06.2023</a></li>
+                                        <li class="body-item-document__name"><a href="#" download>Протокол № 233 заседания Президиума от 07.06.2023</a></li>
+                                    </ul>
+                                    <div class="body-item-document__pagination pagination-page">
+                                        <a href="#" class="pagination-page__item active">1</a>
+                                        <a href="#" class="pagination-page__item">2</a>
+                                        <a href="#" class="pagination-page__item">3</a>
+                                        <a href="#" class="pagination-page__item">4</a>
+                                        <a href="#" class="pagination-page__item">5</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="document__item item-document">
+                            <button type="button" data-spoller class="item-document__top top-item-document">
+                                <div class="top-item-document__title">ИСПОЛНИТЕЛЬНАЯ ДИРЕКЦИЯ</div>
+                                <a href="#" download class="top-item-document__name">Протокол Конференции ФТСАРР от 22.03.2021</a>
+                            </button>
+                            <div class="item-document__body body-item-document">
+                                <div class="body-item-document__wrapper">
+                                    <ul class="body-item-document__names">
+                                        <li class="body-item-document__name"><a href="#" download>Аудиторское заключение 2022</a></li>
+                                        <li class="body-item-document__name"><a href="#" download>Аудиторское заключение 2022</a></li>
+                                        <li class="body-item-document__name"><a href="#" download>Протокол № 233 заседания Президиума от 07.06.2023</a></li>
+                                        <li class="body-item-document__name"><a href="#" download>Аудиторское заключение 2022</a></li>
+                                    </ul>
+                                    <div class="body-item-document__pagination pagination-page">
+                                        <a href="#" class="pagination-page__item active">1</a>
+                                        <a href="#" class="pagination-page__item">2</a>
+                                        <a href="#" class="pagination-page__item">3</a>
+                                        <a href="#" class="pagination-page__item">4</a>
+                                        <a href="#" class="pagination-page__item">5</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="document__button button-line">ЗАГРУЗИТЬ ВСЕ ДОКУМЕНТЫ</button>
+                </div>
+            </section>
+
+            @@include('html/_media.htm',{})
+
+
+            <section class="partners">
+                <div class="partners__container">
+                    <h2 class="partners__title title">НАШИ ПАРТНЁРЫ</h2>
+                    <div class="partners__items">
+                        <!-- <div class="partners__item item-partners"><img src="@img/partners/01.jpg" alt=""></div> -->
+                        <img src="@img/partners/01.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
