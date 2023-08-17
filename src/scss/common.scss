@@ -45,3 +45,54 @@
   &_main {
   }
 }
+
+//========================================================================================================================================================
+
+.top-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__title {
+  }
+
+  &__navigation {
+  }
+}
+
+//========================================================================================================================================================
+
+.navigation {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(8);
+  &__arrow {
+    color: #303030;
+    @include adaptiveValue("font-size", 22, 18);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    &.swiper-button-disabled {
+      opacity: 0.6;
+    }
+
+    &::before {
+      @extend %ic;
+      display: block;
+    }
+
+    &.button-prev {
+      &::before {
+        content: "\e907";
+      }
+    }
+    &.button-next {
+      &::before {
+        content: "\e904";
+      }
+    }
+  }
+}

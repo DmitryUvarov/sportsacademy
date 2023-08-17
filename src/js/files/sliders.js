@@ -119,6 +119,46 @@ if (document.querySelector('.slider-text')) {
 	}
 
 }
+	// slider-management
+	if (document.querySelector('.slider-management')) {
+		// Створюємо слайдер
+		new Swiper('.slider-management', {
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			speed: 800,
+
+			navigation: {
+				prevEl: '.management-navigation .button-prev',
+				nextEl: '.management-navigation .button-next',
+			},
+
+			breakpoints: {
+				375: {
+					slidesPerView: 1.3,
+					spaceBetween: 20,
+				},
+				540: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 2.6,
+					spaceBetween: 30,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 60,
+				},
+			},
+		});
+
+
+}
 
 
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)

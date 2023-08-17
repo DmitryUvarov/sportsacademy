@@ -116,3 +116,50 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.management {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+  &__container {
+  }
+
+  &__top {
+    margin-bottom: toRem(40);
+  }
+
+  &__slider {
+  }
+}
+
+.slider-management {
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+}
+
+.slide-management {
+  font-size: 16px;
+  line-height: 118.8%; /* 19/16 */
+  &__image-ibg {
+    overflow: hidden;
+    @include adaptiveValue("border-radius", 40, 20);
+    padding-bottom: percent(480, 360);
+    margin-bottom: toRem(20);
+  }
+
+  &__name {
+    font-weight: 600;
+
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+
+  &__post {
+    font-weight: 400;
+  }
+}
