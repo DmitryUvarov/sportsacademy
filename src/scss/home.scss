@@ -99,3 +99,20 @@
 }
 
 //====================================================================================================
+
+.partners {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 30);
+  }
+
+  &__items {
+    img {
+      max-width: 100%;
+    }
+  }
+}
