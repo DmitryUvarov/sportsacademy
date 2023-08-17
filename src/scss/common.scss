@@ -1,1 +1,35 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+//====================================================================================================
+
+.text {
+  border-top: toRem(1) solid #303030;
+  border-bottom: toRem(1) solid #303030;
+  @include adaptiveValue("padding-top", 20, 15);
+  @include adaptiveValue("padding-bottom", 20, 15);
+  &__container {
+  }
+
+  &__slider {
+  }
+}
+.slider-text {
+  &__wrapper {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+
+  &__slide {
+    background: linear-gradient(90deg, #8f00ff 4.48%, #c00090 55.52%, #f00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include adaptiveValue("font-size", 40, 24);
+    font-weight: 300;
+    line-height: 120%; /* 48/40 */
+    user-select: none;
+  }
+}
+
+//====================================================================================================

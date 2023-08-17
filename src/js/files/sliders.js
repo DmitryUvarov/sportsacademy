@@ -1,5 +1,5 @@
 /*
-Документація по роботі у шаблоні: 
+Документація по роботі у шаблоні:
 Документація слайдера: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
@@ -8,10 +8,10 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 /*
 Основні модулі слайдера:
-Navigation, Pagination, Autoplay, 
+Navigation, Pagination, Autoplay,
 EffectFade, Lazy, Manipulation
 Детальніше дивись https://swiperjs.com/
 */
@@ -28,24 +28,15 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.swiper123')) {
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
+		new Swiper('.swiper123', {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
-			//autoHeight: true,
 			speed: 800,
-
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
 
 			/*
 			// Ефекти
@@ -105,7 +96,31 @@ function initSliders() {
 			}
 		});
 	}
+
+
+	// slider-text
+if (document.querySelector('.slider-text')) {
+		// Створюємо слайдер
+		new Swiper('.slider-text', {
+			modules: [Navigation, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: "auto",
+			spaceBetween: 40,
+			speed: 8000,
+			loop: true,
+			allowTouchMove: false,
+
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+			},
+		});
+	}
+
 }
+
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
