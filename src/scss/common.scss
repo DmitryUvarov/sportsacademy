@@ -44,6 +44,12 @@
   }
   &_main {
   }
+  &_gradient {
+    background: linear-gradient(128deg, #e5270e 0%, #3a3938 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 //========================================================================================================================================================
@@ -53,6 +59,33 @@
   align-items: center;
   justify-content: space-between;
   &__title {
+  }
+
+  &__link {
+    position: relative;
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 118.8%; /* 19/16 */
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: toRem(1);
+      bottom: 0;
+      left: 0;
+      display: block;
+      background-color: #303030;
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          width: 80%;
+          left: 10%;
+        }
+      }
+    }
   }
 
   &__navigation {
@@ -93,6 +126,18 @@
       &::before {
         content: "\e904";
       }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.hero {
+  &__image-ibg {
+    padding-bottom: 50%;
+
+    @media (max-width: $mobile) {
+      padding-bottom: 80%;
     }
   }
 }
