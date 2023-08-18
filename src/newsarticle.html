@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"NewsArticlePage"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm', {
+        "line": "header_line"
+        })
+        <main class="page">
+
+
+            <section class="newsarticle">
+                <div class="mark__container">
+
+                </div>
+                <div class="newsarticle__container">
+                    <div class="newsarticle__mark mark">16 августа 2023</div>
+                    <div class="newsarticle__body">
+                        <h1 class="newsarticle__title">"Брейкеры, готовьтесь - федерация танцев объявляет о новом мировом чемпионате, который пройдет в этом году!"</h1>
+                        <div class="newsarticle__text">
+                            <p>Федерация танцев радостно объявляет о предстоящем в этом году Мировом Чемпионате по брейкингу! Это важное событие, которое соберет лучших брейкеров со всего мира на одной сцене. Участники будут бороться за звание лучшего, демонстрируя свою уникальную технику, стиль и выразительность.
+                            </p>
+                            <p>Мировой Чемпионат по брейкингу - это праздник культуры хип-хопа и стиля, который объединяет танцоров и ценителей этой формы искусства. Участники будут соревноваться в различных категориях, включая одиночные выступления и групповые баттлы, впечатляя зрителей своими трюками, акробатикой и музыкальностью.
+                            </p>
+                            <p>Чемпионат предоставит площадку для танцоров, чтобы они продемонстрировали свой потенциал и вдохновили других на развитие в этом направлении. Брейкинг - это не только спортивное состязание, но и искусство самовыражения, где каждый участник может показать свою индивидуальность и креативность.</p>
+                            <p>Федерация танцев приглашает всех любителей брейкинга и хип-хопа посетить этот Мировой Чемпионат и насладиться невероятными выступлениями. Здесь вы сможете увидеть мастерство лучших брейкеров мира, почувствовать энергию и атмосферу, которые они создают на сцене.</p>
+                            <p>Не упустите возможность стать свидетелем этого захватывающего события и поддержать своих любимых танцоров. Мировой Чемпионат по брейкингу - это место, где таланты расцветают, страсть оживает и музыка становится живой.</p>
+                        </div>
+                        <div class="newsarticle__images-ibg"><img src="@img/news/11.jpg" alt=""></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="news">
+                <div class="news__container">
+                    <div class="news__top top-block">
+                        <div class="top-block__title title">ДРУГИЕ НОВОСТИ</div>
+                        <a href="#" class="top-block__link">ВСЕ НОВОСТИ</a>
+                    </div>
+                    <div class="news__items">
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">24 июля 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/01.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">Федерация танцев объявляет о новых возможностях и привилегиях для своих членов. </a></div>
+                        </div>
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">1 августа 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/02.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">"Брейкеры, готовьтесь - федерация танцев брейкинга объявляет о новом мировом чемпионате, который пройдет в этом году!"</a></div>
+                        </div>
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">16 августа 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/03.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">Федерация спортивных танцев объявила о запуске новой программы развития молодых талантов. </a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_popup.htm',{})
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

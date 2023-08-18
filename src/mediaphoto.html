@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"MediaPhotoPage"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm', {
+        "line": "header_line"
+        })
+        <main class="page">
+
+
+            <section class="mediaphoto">
+                <div class="mediaphoto__container">
+                    <div class="mediaphoto__top top-block">
+                        <div class="mediaphoto__title">Фестиваль детского спорта "Спортивный Сириус"</div>
+                        <div class="mediaphoto__navigation navigation mediaphoto-navigation">
+                            <button class="navigation__arrow button-prev"></button>
+                            <button class="navigation__arrow button-next"></button>
+                        </div>
+                    </div>
+                    <div class="mediaphoto__slider">
+                        <div class="mediaphoto__wrapper swiper-wrapper">
+                            <div class="mediaphoto__slide slide-photo-ibg swiper-slide"><img data-fancybox="gallery" src="@img/photo/01.jpg" alt=""></div>
+                            <div class="mediaphoto__slide slide-photo-ibg swiper-slide"><img data-fancybox="gallery" src="@img/photo/02.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+        @@include('html/_popup.htm',{})
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

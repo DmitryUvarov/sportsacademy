@@ -83,6 +83,7 @@
 		"babel-loader": "latest"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^4.0.31",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
 		"simplebar": "latest",

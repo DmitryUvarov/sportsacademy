@@ -43,6 +43,12 @@
     color: #fff;
   }
   &_main {
+    @include adaptiveValue("font-size", 64, 30);
+
+    background: linear-gradient(90deg, #8f00ff 0%, #c00090 55.52%, #f00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   &_gradient {
     background: linear-gradient(128deg, #e5270e 0%, #3a3938 100%);
@@ -180,4 +186,10 @@
   line-height: 125%; /* 15/12 */
   border-radius: toRem(68);
   border: 1px solid rgba(48, 48, 48, 0.8);
+}
+
+//========================================================================================================================================================
+
+.fancybox__container {
+  max-width: none;
 }

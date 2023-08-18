@@ -1,0 +1,169 @@
+.media {
+  @include adaptiveValue("padding-top", 80, 40);
+  @include adaptiveValue("padding-bottom", 80, 40);
+  &__container {
+  }
+
+  &__top {
+    @include adaptiveValue("margin-bottom", 40, 30);
+  }
+
+  &__items {
+    display: grid;
+
+    column-gap: toRem(60);
+    @include adaptiveValue("row-gap", 60, 40);
+
+    @media (min-width: $mobileSmall) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(400), 1fr));
+    }
+    @media (max-width: $tablet) {
+      column-gap: toRem(30);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: toRem(30);
+  }
+
+  &__item {
+  }
+
+  &__button {
+    width: 100%;
+    @include adaptiveValue("margin-top", 50, 30);
+  }
+}
+
+.item-media {
+  &__image-ibg {
+    display: block;
+    overflow: hidden;
+    @include adaptiveValue("border-radius", 39, 25);
+
+    padding-bottom: percent(328, 570);
+    margin-bottom: toRem(10);
+
+    &::before {
+      @include adaptiveValue("font-size", 85, 45, 0, 767, 375);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      color: #fff;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.06);
+        }
+      }
+    }
+    img {
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &__text {
+    position: absolute;
+
+    @include adaptiveValue("padding", 30, 15, 0, 767, 375);
+    bottom: 0;
+    left: 0;
+    color: #fff;
+
+    box-sizing: content-box;
+    max-width: toRem(359);
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__mark {
+  }
+}
+
+//========================================================================================================================================================
+
+.mediaphoto {
+  @include adaptiveValue("padding-top", 60, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+  &__container {
+  }
+
+  &__top {
+    @include adaptiveValue("margin-bottom", 40, 30);
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+  }
+
+  &__navigation {
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+
+  &__video-ibg {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    max-width: toRem(1135);
+    margin: 0 auto;
+    padding-bottom: percent(600, 1200);
+    @include adaptiveValue("border-radius", 40, 20);
+
+    @media (max-width: $mobile) {
+      padding-bottom: 80%;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &::before {
+      @include adaptiveValue("font-size", 102, 55);
+      color: #fff9ec;
+      z-index: 2;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    img {
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
+
+.slide-photo-ibg {
+  padding-bottom: percent(600, 1200);
+  @include adaptiveValue("border-radius", 40, 20);
+  overflow: hidden;
+
+  @media (max-width: $mobile) {
+    padding-bottom: 80%;
+  }
+}

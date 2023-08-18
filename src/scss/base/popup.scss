@@ -1,61 +1,159 @@
 body::after {
-	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.8s ease 0s;
-	pointer-events: none;
-	z-index: 149;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
 }
 .popup-show body::after {
-	opacity: 1;
+  opacity: 1;
 }
 .popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
-	visibility: hidden;
-	pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
 }
 .popup_show {
-	z-index: 150;
-	visibility: visible;
-	overflow: auto;
-	pointer-events: auto;
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
 }
 .popup_show .popup__content {
-	visibility: visible;
-	transform: scale(1);
+  visibility: visible;
+  transform: scale(1);
 }
 .popup__wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100%;
-	flex: 1 1 auto;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .popup__content {
-	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
-	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
-	.lock & {
-		visibility: visible;
-	}
+  position: relative;
+  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  background-color: #eee;
+  padding-right: toRem(15);
+  padding-left: toRem(15);
+  @include adaptiveValue("padding-top", 90, 40);
+  @include adaptiveValue("padding-bottom", 145, 40);
+  width: 100%;
+  max-width: toRem(1200);
+  @include adaptiveValue("border-radius", 45, 15);
+  background: #d9d9d9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .lock & {
+    visibility: visible;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  top: toRem(15);
+  right: toRem(15);
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+//========================================================================================================================================================
+
+.popup__title {
+  color: #6c2bac;
+  @include adaptiveValue("font-size", 16, 14);
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  margin-bottom: toRem(20);
+  text-align: center;
+}
+.popup__text {
+  @include adaptiveValue("font-size", 16, 14);
+  line-height: 140%;
+  margin-bottom: toRem(5);
+  text-align: center;
+  span {
+    font-weight: 500;
+  }
+}
+.popup-form {
+  @include adaptiveValue("margin-top", 50, 30);
+  max-width: toRem(480);
+}
+.popup-form__line {
+  display: flex;
+  column-gap: toRem(30);
+  margin-bottom: toRem(20);
+
+  @media (max-width: em(660)) {
+    flex-direction: column;
+    row-gap: toRem(20);
+  }
+}
+.popup-form__col {
+  width: 100%;
+}
+
+.popup-form__title {
+  color: #e5270e;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 140%; /* 16.8px */
+  margin-bottom: toRem(5);
+  text-align: center;
+}
+.popup-form__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 140%; /* 16.8px */
+  margin-bottom: toRem(20);
+}
+.popup-form__button {
+  width: 100%;
+  @include adaptiveValue("margin-top", 50, 30);
+  border-radius: toRem(20);
+
+  height: toRem(49);
+}
+
+.popup-form__checkbox {
+  font-size: 8px;
+  line-height: 140%; /* 11.2px */
+
+  .checkbox__label {
+    &::before {
+      flex: 0 0 14px;
+      width: 14px;
+      height: 14px;
+    }
+    &::after {
+      flex: 0 0 10px;
+      width: 10px;
+      height: 10px;
+    }
+  }
 }

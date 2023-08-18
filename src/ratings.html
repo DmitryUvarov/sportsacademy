@@ -17,7 +17,7 @@
                         <div class="ratings__sorting sorting">
                             <div class="sorting__body">
                                 <button class="sorting__title">
-                                    <div class="sorting__title-text">Пол</div>
+                                    <div class="sorting__title-text ratings__title">ПОЛ</div>
                                 </button>
                                 <ul class="sorting__list">
                                     <li class="sorting__item">
@@ -40,7 +40,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sorting__mark mark">Все</div>
+                            <div class="sorting__mark sorting__mark_hide mark">Все</div>
                         </div>
                         <div class="ratings__title">ИМЯ АТЛЕТА</div>
                         <div class="ratings__title">ОЧКИ</div>
@@ -73,6 +73,7 @@
             </section>
 
         </main>
+        @@include('html/_popup.htm',{})
         @@include('html/_footer.htm',{})
     </div>
     @@include('html/_js.htm',{})

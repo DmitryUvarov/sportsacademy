@@ -118,7 +118,7 @@ if (document.querySelector('.slider-text')) {
 		});
 	}
 
-}
+
 	// slider-management
 	if (document.querySelector('.slider-management')) {
 		// Створюємо слайдер
@@ -156,6 +156,39 @@ if (document.querySelector('.slider-text')) {
 				},
 			},
 		});
+	}
+
+
+	// mediaphoto__slider
+	if (document.querySelector('.mediaphoto__slider')) {
+		// Створюємо слайдер
+		new Swiper('.mediaphoto__slider', {
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			speed: 800,
+
+			navigation: {
+				prevEl: '.mediaphoto-navigation .button-prev',
+				nextEl: '.mediaphoto-navigation .button-next',
+			},
+
+			breakpoints: {
+				375: {
+					slidesPerView: 1.1,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 1.16,
+					spaceBetween: 30,
+				},
+				991: {
+					slidesPerView: 1.18,
+					spaceBetween: 60,
+				},
+			},
+		});
+	}
 
 
 }

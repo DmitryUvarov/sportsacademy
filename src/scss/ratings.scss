@@ -93,7 +93,6 @@
   }
 
   &__title {
-    text-transform: uppercase;
     display: flex;
     align-items: center;
     column-gap: toRem(10);
@@ -112,10 +111,6 @@
     @include adaptiveValue("font-size", 16, 14);
     font-weight: 600;
     line-height: 118.8%; /* 19/16 */
-    background: linear-gradient(122deg, #3a3938 0%, #5b16b4 42.39%, #3a3938 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   &__list {
@@ -127,6 +122,7 @@
     padding: toRem(15) toRem(10);
     min-width: toRem(150);
     border-radius: toRem(10);
+    z-index: 2;
 
     transition: all 0.3s ease 0s;
     opacity: 0;
@@ -145,8 +141,10 @@
   &__mark {
     margin-left: toRem(15);
 
-    @media (max-width: $tablet) {
-      display: none;
+    &_hide {
+      @media (max-width: $tablet) {
+        display: none;
+      }
     }
   }
 }

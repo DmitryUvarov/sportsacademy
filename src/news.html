@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"NewsPage"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm', {
+        "line": "header_line"
+        })
+        <main class="page">
+
+
+
+            <section class="news">
+                <div class="news__container">
+                    <div class="news__title title title_gradient title_main">НОВОСТИ</div>
+
+                    <div class="news__items">
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">24 июля 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/01.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">Федерация танцев объявляет о новых возможностях и привилегиях для своих членов. </a></div>
+                        </div>
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">1 августа 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/02.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">"Брейкеры, готовьтесь - федерация танцев брейкинга объявляет о новом мировом чемпионате, который пройдет в этом году!"</a></div>
+                        </div>
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">16 августа 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/03.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">Федерация спортивных танцев объявила о запуске новой программы развития молодых талантов. </a></div>
+                        </div>
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">24 июля 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/01.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">Федерация танцев объявляет о новых возможностях и привилегиях для своих членов. </a></div>
+                        </div>
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">1 августа 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/02.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">"Брейкеры, готовьтесь - федерация танцев брейкинга объявляет о новом мировом чемпионате, который пройдет в этом году!"</a></div>
+                        </div>
+                        <div class="news__item item-news">
+                            <div class="item-news__date mark">16 августа 2023</div>
+                            <a href="#" class="item-news__image-ibg"><img src="@img/news/03.jpg" alt=""></a>
+                            <div class="item-news__text"><a href="#">Федерация спортивных танцев объявила о запуске новой программы развития молодых талантов. </a></div>
+                        </div>
+                    </div>
+                    <button class="news__button button-line">ЗАГРУЗИТЬ ЕЩЁ</button>
+                </div>
+            </section>
+
+
+
+
+
+        </main>
+        @@include('html/_popup.htm',{})
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

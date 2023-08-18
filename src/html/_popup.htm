@@ -1,10 +1,52 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
+			<button data-close type="button" class="popup__close _icon-close"></button>
+
+			<div class="popup__title">ОПЛАТА ЧЛЕНСКИХ ВЗНОСОВ, ДЛЯ ВНОВЬ ВСТУПИВШИХ!</div>
+			<div class="popup__text">Вступительный взнос-10% от БРВ — <span> 33.000 </span> сум
 			</div>
+			<div class="popup__text">Членский взнос за второе полугодие-50% от 2 БРВ — <span>330.000 </span> сум
+			</div>
+
+			<form action="#" method="POST" action="sendmail.php" data-dev class="popup-form">
+				<div class="popup-form__line">
+					<div class="popup-form__col"><input readonly tabindex="-1" autocomplete="off" type="text" name="form[]" placeholder="Р/с : 20212000804944182001" class="popup-form__input input"></div>
+					<div class="popup-form__col"><input readonly tabindex="-1" autocomplete="off" type="text" name="form[]" placeholder="Инн: 207135493" class="popup-form__input input"></div>
+				</div>
+				<div class="popup-form__line">
+					<div class="popup-form__col"><input readonly tabindex="-1" autocomplete="off" type="text" name="form[]" placeholder="МФО-00425" class="popup-form__input input"></div>
+					<div class="popup-form__col"><input readonly tabindex="-1" autocomplete="off" type="text" name="form[]" placeholder="Шайхонтоурский ф-л Ипотека банк" class="popup-form__input input"></div>
+				</div>
+				<div class="popup-form__line">
+					<input autocomplete="off" type="text" name="form[]" data-required placeholder="Сумма*" class="popup-form__input input">
+				</div>
+				<div class="popup-form__line">
+					<input readonly tabindex="-1" autocomplete="off" type="text" name="form[]" placeholder="Федерация танцевального спорта Узбекистан" class="popup-form__input input">
+				</div>
+				<div class="popup-form__line">
+					<div class="popup-form__col"><input autocomplete="off" type="text" name="form[]" data-required placeholder="Имя*" class="popup-form__input input"></div>
+					<div class="popup-form__col"><input autocomplete="off" type="text" name="form[]" data-required placeholder="Фамилия*" class="popup-form__input input"></div>
+				</div>
+				<div class="popup-form__line">
+					<input autocomplete="off" type="text" name="form[]" data-required="phone" data-phone placeholder="Телефон*" class="popup-form__input input">
+				</div>
+
+
+				<div class="popup-form__title">ДОЛЖНО БЫТЬ ДВЕ КВИТАНЦИИ! </div>
+				<div class="popup-form__text">Одна на вступительный взнос, вторая на оплату членского взноса.
+					В квитанции указывать, то лицо, которое вступило в федерацию! Ребёнка не вписывать!</div>
+
+				<div class="popup-form__checkbox checkbox">
+					<input id="x_1" class="checkbox__input" data-required type="checkbox" value="1" name="form[]">
+					<label for="x_1" class="checkbox__label">
+						<div class="checkbox__text">Я принимаю <a href="#">пользовальское соглашение</a></div>
+					</label>
+				</div>
+
+				<button class="popup-form__button button-line">ПЕРЕЙТИ НА СТРАНИЦУ ОПЛАТЫ</button>
+			</form>
+
 		</div>
 	</div>
 </div>
