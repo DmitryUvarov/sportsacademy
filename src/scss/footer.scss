@@ -78,6 +78,11 @@
     @media (max-width: em(660)) {
       order: -1;
       margin-bottom: toRem(10);
+      @include adaptiveValue("max-width", 126, 100, 1, 660, 375);
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 
